@@ -14,7 +14,7 @@ A modern and customizable component library built with Vue 3 and Tailwind CSS, d
 1. **Install the component library via npm:**
 
 ```bash
-npm install @rutgerbakker95/vue-components
+yarn add @rutgerbakker95/vue-components
 ```
 
 2. **Add the component library plugin to your `tailwind.config.js`:**
