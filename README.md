@@ -1,17 +1,17 @@
 # @rutgerbakker95/vue-components
 
-A modern and customizable component library built with Vue 3 and Tailwind CSS, designed to deliver a flexible, cohesive UI experience across all projects. Quickly integrate reusable components with ease, and customize them to suit your unique branding needs.
+A modern and customizable component library built with **Vue 3** and **Tailwind CSS**, designed to deliver a flexible, cohesive UI experience across all projects. Quickly integrate reusable components with ease, and customize them to suit your unique branding needs.
 
 ## Features
 
-- **Vue 3 Components**: Carefully crafted components that work seamlessly with Vue 3.
-- **Tailwind CSS Integration**: Leverage Tailwind CSS for styling, with full theme customization support.
-- **Theming & Customization**: Tailor components to your project’s branding directly from the `tailwind.config.js`.
-- **Accessibility First**: Components are designed with accessibility in mind, ensuring compliance with best practices.
+- **Vue 3 Components**: Carefully crafted components that work seamlessly with Vue 3 ✨
+- **Tailwind CSS Integration**: Leverage Tailwind CSS for styling, with full theme customization support 💎
+- **Theming & Customization**: Tailor components to your project’s branding directly from the `tailwind.config.js` 🚀
+- **Accessibility First**: Components are designed with accessibility in mind, ensuring compliance with best practices 🖖🏽
 
 ## Installation
 
-1. **Install the component library via npm:**
+1. **Install the component library via yarn:**
 
 ```bash
 yarn add @rutgerbakker95/vue-components
