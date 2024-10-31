@@ -21,18 +21,27 @@ npm install @rutgerbakker95/vue-components
 
 ```javascript
 // tailwind.config.js
-import componentLibrary from '@rutgerbakker95/vue-components/tailwind';
+import components from '@rutgerbakker95/vue-components/src/tailwind';
 
 export default {
   theme: {
     extend: {
       // Customize component styles here
-      buttonColor: '#000',
-      buttonBgPrimary: '#1d4ed8', // Darker blue
-      buttonBgSecondary: '#4b5563', // Gray
+      components: (theme) => ({
+        button: {
+          primary: {
+            backgroundColor: theme('colors.yellow.500'),
+            color: '#000',
+          },
+          secondary: {
+            backgroundColor: theme('colors.blue.500'),
+            color: '#fff',
+          },
+        },
+      }),
     },
   },
-  plugins: [componentLibrary],
+  plugins: [components],
 };
 ```
 
@@ -65,9 +74,18 @@ Tailor component styles by overriding default values in `tailwind.config.js`. Th
 module.exports = {
   theme: {
     extend: {
-      buttonColor: '#ff5733', // Custom button text color
-      buttonBgPrimary: '#ffbd69', // Primary background color
-      buttonBgSecondary: '#007bff', // Secondary background color
+      components: (theme) => ({
+        button: {
+          primary: {
+            backgroundColor: theme('colors.yellow.500'),
+            color: '#000',
+          },
+          secondary: {
+            backgroundColor: theme('colors.blue.500'),
+            color: '#fff',
+          },
+        },
+      }),
     },
   },
 };
