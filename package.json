@@ -1,7 +1,6 @@
 {
-  "name": "vue-components",
+  "name": "@rutgerbakker95/vue-components",
   "version": "0.0.0-alpha.0",
-  "private": true,
   "type": "module",
   "main": "dist/vue-components.umd.js",
   "module": "dist/vue-components.es.js",
@@ -14,7 +13,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "publish": "npm login --registry=https://npm.pkg.github.com && npm publish"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "vue": "^3.5.12"
