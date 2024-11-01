@@ -20,7 +20,7 @@ defineProps({
   color: {
     type: String,
     default: 'primary',
-    validator: (value) => ['primary', 'secondary', 'light', 'dark'].includes(value),
+    validator: (value) => ['primary', 'secondary', 'tertiary', 'light', 'dark', 'danger', 'warning', 'success'].includes(value),
   },
 });
 </script>
