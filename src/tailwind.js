@@ -80,6 +80,15 @@ export default plugin.withOptions((options) => ({ addComponents, theme }) => {
         fontWeight: theme('components.button.lg.fontWeight'),
         fontSize: theme('components.button.lg.fontSize'),
       },
+
+      // Icon styling
+      '.button-icon': {
+        '@apply block': {},
+        fill: 'currentColor',
+        width: '1.5rem',
+        height: '1.5rem',
+        flexShrink: '0',
+      },
     },
   });
 }, () => ({
@@ -98,6 +107,7 @@ export default plugin.withOptions((options) => ({ addComponents, theme }) => {
         fontWeight: '500',
         fontSize: '1rem',
         whiteSpace: 'normal',
+
         // Color variants
         primary: {
           backgroundColor: '#3490dc',
@@ -131,6 +141,7 @@ export default plugin.withOptions((options) => ({ addComponents, theme }) => {
           backgroundColor: '#28a745',
           color: '#fff',
         },
+
         // Size variants
         xs: {
           padding: {
@@ -140,7 +151,7 @@ export default plugin.withOptions((options) => ({ addComponents, theme }) => {
             left: '0.5rem',
           },
           gap: '0.125rem',
-          borderRadius: '0.25rem',
+          borderRadius: '9999px',
           fontWeight: '400',
           fontSize: '0.75rem',
         },
@@ -152,7 +163,7 @@ export default plugin.withOptions((options) => ({ addComponents, theme }) => {
             left: '1rem',
           },
           gap: '0.25rem',
-          borderRadius: '0.375rem',
+          borderRadius: '9999px',
           fontWeight: '400',
           fontSize: '0.875rem',
         },
@@ -164,7 +175,7 @@ export default plugin.withOptions((options) => ({ addComponents, theme }) => {
             left: '2rem',
           },
           gap: '0.75rem',
-          borderRadius: '0.5rem',
+          borderRadius: '9999px',
           fontWeight: '500',
           fontSize: '1.25rem',
         },
