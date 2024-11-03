@@ -1,6 +1,6 @@
 {
   "name": "@rutgerbakker95/vue-components",
-  "version": "1.0.0-beta.8",
+  "version": "1.0.0-beta.18",
   "type": "module",
   "main": "dist/vue-components.umd.js",
   "module": "dist/vue-components.es.js",
@@ -14,7 +14,8 @@
       "import": "./dist/vue-components.es.js",
       "require": "./dist/vue-components.umd.js"
     },
-    "./tailwind": "./dist/tailwind.js"
+    "./tailwind": "./dist/tailwind.js",
+    "./nuxt": "./dist/nuxt-module.js"
   },
   "scripts": {
     "dev": "vite",

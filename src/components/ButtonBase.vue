@@ -1,9 +1,14 @@
 <template>
   <Component
     :is="as"
-    :class="['button', `button-${color}`]"
+    :class="['button', `button-${color}`, `button-${size}`]"
   >
     {{ label }}
+    <Component
+      :is="icon"
+      v-if="icon"
+      class="button-icon"
+    />
   </Component>
 </template>
 
@@ -16,6 +21,15 @@ defineProps({
   label: {
     type: String,
     default: '',
+  },
+  icon: {
+    type: [Object, Function],
+    default: null,
+  },
+  size: {
+    type: String,
+    default: 'base',
+    validator: (value) => ['xs', 'sm', 'base', 'lg'].includes(value),
   },
   color: {
     type: String,

@@ -13,7 +13,7 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         { src: 'src/tailwind.js', dest: '' },
-        { src: 'src/nuxt.js', dest: '' }
+        { src: 'src/nuxt-module.js', dest: '' }
       ]
     })
   ],
