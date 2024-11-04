@@ -1,40 +1,42 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from 'node:url';
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
-import { viteStaticCopy } from 'vite-plugin-static-copy'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueDevTools from 'vite-plugin-vue-devtools';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
+import eslintPlugin from 'vite-plugin-eslint';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    eslintPlugin(),
     viteStaticCopy({
       targets: [
         { src: 'src/tailwind.js', dest: '' },
-        { src: 'src/nuxt-module.js', dest: '' }
-      ]
-    })
+        { src: 'src/nuxt-module.js', dest: '' },
+      ],
+    }),
   ],
   build: {
     lib: {
       entry: 'src/index.js',
       name: 'VueComponents',
-      fileName: (format) => `vue-components.${format}.js`
+      fileName: (format) => `vue-components.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],
       output: {
         globals: {
-          vue: 'Vue'
-        }
-      }
-    }
+          vue: 'Vue',
+        },
+      },
+    },
   },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
-})
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+});
