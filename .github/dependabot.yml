@@ -1,0 +1,28 @@
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "00:30"
+      timezone: Europe/Amsterdam
+    open-pull-requests-limit: 2
+    reviewers:
+      - "rutgerbakker95"
+
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "00:30"
+      timezone: Europe/Amsterdam
+    open-pull-requests-limit: 2
+    reviewers:
+      - "rutgerbakker95"
+    ignore:
+    groups:
+      regular-updates:
+        update-types:
+        - "minor"
+        - "patch"

@@ -1,0 +1,19 @@
+name: Auto merge
+on: pull_request_target
+
+jobs:
+  single:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ahmadnassri/action-dependabot-auto-merge@v2
+      with:
+        target: minor
+        github-token: "${{ secrets.TOKEN }}"
+  group:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' && contains(github.event.pull_request.head.ref, 'regular-updates') }}
+    steps:
+    - uses: hmarr/auto-approve-action@v4
+      with:
+        github-token: "${{ secrets.TOKEN }}"
+        review-message: "@dependabot merge"
