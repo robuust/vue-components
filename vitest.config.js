@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import path from 'node:path';
 import { defineConfig } from 'vitest/config';
 import Vue from '@vitejs/plugin-vue';
