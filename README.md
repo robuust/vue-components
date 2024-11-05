@@ -4,10 +4,11 @@ A modern and customizable component library built with **Vue 3** and **Tailwind 
 
 ## Features
 
-- **Vue 3 Components**: Carefully crafted components that work seamlessly with Vue 3 ✨
-- **Tailwind CSS Integration**: Leverage Tailwind CSS for styling, with full theme customization support 💎
-- **Theming & Customization**: Tailor components to your project’s branding directly from the `tailwind.config.js` 🚀
-- **Accessibility First**: Components are designed with accessibility in mind, ensuring compliance with best practices 🖖🏽
+- ✨ **Vue 3 Components**: Carefully crafted components that work seamlessly with Vue 3
+- 💎 **Tailwind CSS Integration**: Leverage Tailwind CSS for styling, with full theme customization support
+- 🚀 **Theming & Customization**: Tailor components to your project’s branding directly from the `tailwind.config.js`
+- 🖖🏽 **Accessibility First**: Components are designed with accessibility in mind, ensuring compliance with best practices
+- 📦 **Nuxt 3 module available**
 
 ## Installation
 
@@ -44,6 +45,18 @@ export default {
   plugins: [components],
 };
 ```
+
+## For Nuxt 3 Projects
+
+**Add the module to your `nuxt.config.ts` or `nuxt.config.js`:**
+
+```javascript
+export default defineNuxtConfig({
+  modules: ['@rutgerbakker95/vue-components/nuxt'],
+});
+```
+
+This will automatically register all components globally in your Nuxt application, making them available for immediate use.
 
 ## Usage
 
