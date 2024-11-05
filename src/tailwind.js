@@ -55,6 +55,10 @@ export default plugin(() => ({ addComponents, theme }) => {
         color: theme('components.button.success.color'),
         backgroundColor: theme('components.button.success.backgroundColor'),
       },
+      '&.button-clear': {
+        '@apply bg-transparent px-0': {},
+        color: theme('components.button.clear.color'),
+      },
 
       // Size variants
       '&.button-xs': {
@@ -138,6 +142,9 @@ export default plugin(() => ({ addComponents, theme }) => {
         success: {
           backgroundColor: '#28a745',
           color: '#fff',
+        },
+        clear: {
+          color: '#000000',
         },
 
         // Size variants
