@@ -1,17 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import path from 'path';
-import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import pluginVue from 'eslint-plugin-vue';
 
-// mimic CommonJS variables -- not needed if using CommonJS
-const filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(filename);
-
-const compat = new FlatCompat({
-  baseDirectory: dirname,
-});
+const compat = new FlatCompat();
 
 export default [
   {
@@ -27,8 +19,14 @@ export default [
   js.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
   ...compat.extends('@vue/eslint-config-airbnb'),
+  ...compat.env({ jest: true }),
 
   {
+    languageOptions: {
+      globals: {
+        vi: false,
+      },
+    },
     rules: {
       'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
       'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
