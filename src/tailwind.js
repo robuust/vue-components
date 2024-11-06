@@ -13,51 +13,80 @@ import plugin from 'tailwindcss/plugin';
 export default plugin.withOptions(() => ({ addComponents, theme }) => {
   addComponents({
     '.button': {
-      '@apply inline-flex items-center justify-center text-center': {},
-      color: theme('components.button.primary.color'),
+      '@apply inline-flex items-center justify-center text-center h-fit': {},
+      ...theme('components.button'),
       padding: `${theme('components.button.padding.top')} ${theme('components.button.padding.right')} ${theme('components.button.padding.bottom')} ${theme('components.button.padding.left')}`,
-      gap: theme('components.button.gap'),
-      borderRadius: theme('components.button.borderRadius'),
-      fontWeight: theme('components.button.fontWeight'),
-      fontSize: theme('components.button.fontSize'),
-      whiteSpace: theme('components.button.whiteSpace'),
+
+      // Icon styling
+      '.button-icon': {
+        '@apply block': {},
+        ...theme('components.button.icon'),
+      },
 
       // Color variants
       '&.button-primary': {
-        color: theme('components.button.primary.color'),
-        backgroundColor: theme('components.button.primary.backgroundColor'),
+        ...theme('components.button.primary'),
+
+        '&:hover': {
+          ...theme('components.button.primary.hover'),
+        },
       },
       '&.button-secondary': {
-        color: theme('components.button.secondary.color'),
-        backgroundColor: theme('components.button.secondary.backgroundColor'),
+        ...theme('components.button.secondary'),
+
+        '&:hover': {
+          ...theme('components.button.secondary.hover'),
+        },
       },
       '&.button-tertiary': {
-        color: theme('components.button.tertiary.color'),
-        backgroundColor: theme('components.button.tertiary.backgroundColor'),
+        ...theme('components.button.tertiary'),
+
+        '&:hover': {
+          ...theme('components.button.tertiary.hover'),
+        },
       },
       '&.button-light': {
-        color: theme('components.button.light.color'),
-        backgroundColor: theme('components.button.light.backgroundColor'),
+        ...theme('components.button.light'),
+
+        '&:hover': {
+          ...theme('components.button.light.hover'),
+        },
       },
       '&.button-dark': {
-        color: theme('components.button.dark.color'),
-        backgroundColor: theme('components.button.dark.backgroundColor'),
+        ...theme('components.button.dark'),
+
+        '&:hover': {
+          ...theme('components.button.dark.hover'),
+        },
       },
       '&.button-danger': {
-        color: theme('components.button.danger.color'),
-        backgroundColor: theme('components.button.danger.backgroundColor'),
+        ...theme('components.button.danger'),
+
+        '&:hover': {
+          ...theme('components.button.danger.hover'),
+        },
       },
       '&.button-warning': {
-        color: theme('components.button.warning.color'),
-        backgroundColor: theme('components.button.warning.backgroundColor'),
+        ...theme('components.button.warning'),
+
+        '&:hover': {
+          ...theme('components.button.warning.hover'),
+        },
       },
       '&.button-success': {
-        color: theme('components.button.success.color'),
-        backgroundColor: theme('components.button.success.backgroundColor'),
+        ...theme('components.button.success'),
+
+        '&:hover': {
+          ...theme('components.button.success.hover'),
+        },
       },
       '&.button-clear': {
         '@apply bg-transparent px-0': {},
-        color: theme('components.button.clear.color'),
+        ...theme('components.button.clear'),
+
+        '&:hover': {
+          ...theme('components.button.clear.hover'),
+        },
       },
 
       // Size variants
@@ -67,6 +96,10 @@ export default plugin.withOptions(() => ({ addComponents, theme }) => {
         borderRadius: theme('components.button.xs.borderRadius'),
         fontWeight: theme('components.button.xs.fontWeight'),
         fontSize: theme('components.button.xs.fontSize'),
+
+        '.button-icon': {
+          ...theme('components.button.xs.icon'),
+        },
       },
       '&.button-sm': {
         padding: `${theme('components.button.sm.padding.top')} ${theme('components.button.sm.padding.right')} ${theme('components.button.sm.padding.bottom')} ${theme('components.button.sm.padding.left')}`,
@@ -74,6 +107,10 @@ export default plugin.withOptions(() => ({ addComponents, theme }) => {
         borderRadius: theme('components.button.sm.borderRadius'),
         fontWeight: theme('components.button.sm.fontWeight'),
         fontSize: theme('components.button.sm.fontSize'),
+
+        '.button-icon': {
+          ...theme('components.button.sm.icon'),
+        },
       },
       '&.button-lg': {
         padding: `${theme('components.button.lg.padding.top')} ${theme('components.button.lg.padding.right')} ${theme('components.button.lg.padding.bottom')} ${theme('components.button.lg.padding.left')}`,
@@ -81,15 +118,10 @@ export default plugin.withOptions(() => ({ addComponents, theme }) => {
         borderRadius: theme('components.button.lg.borderRadius'),
         fontWeight: theme('components.button.lg.fontWeight'),
         fontSize: theme('components.button.lg.fontSize'),
-      },
 
-      // Icon styling
-      '.button-icon': {
-        '@apply block': {},
-        fill: 'currentColor',
-        width: '1.5rem',
-        height: '1.5rem',
-        flexShrink: '0',
+        '.button-icon': {
+          ...theme('components.button.lg.icon'),
+        },
       },
     },
   });
@@ -105,60 +137,106 @@ export default plugin.withOptions(() => ({ addComponents, theme }) => {
           left: '1.5rem',
         },
         gap: '0.5rem',
-        borderRadius: '9999px',
-        fontWeight: '500',
+        borderRadius: '0.75rem',
+        fontWeight: '400',
         fontSize: '1rem',
         whiteSpace: 'normal',
 
+        // Icon styling
+        icon: {
+          fill: 'currentColor',
+          width: '1.25rem',
+          height: '1.25rem',
+          flexShrink: '0',
+        },
+
         // Color variants
         primary: {
-          backgroundColor: '#3490dc',
+          backgroundColor: '#007bff',
           color: '#fff',
+          hover: {
+            backgroundColor: '#0056b3',
+            color: '#fff',
+          },
         },
         secondary: {
           backgroundColor: '#6c757d',
           color: '#fff',
+          hover: {
+            backgroundColor: '#6c757d',
+            color: '#fff',
+          },
         },
         tertiary: {
-          backgroundColor: '#e9ecef',
-          color: '#212529',
+          backgroundColor: '#1cffee',
+          color: '#000',
+          hover: {
+            backgroundColor: '#1cffee',
+            color: '#000',
+          },
         },
         light: {
           backgroundColor: '#f8f9fa',
           color: '#212529',
+          hover: {
+            backgroundColor: '#f8f9fa',
+            color: '#212529',
+          },
         },
         dark: {
           backgroundColor: '#343a40',
           color: '#fff',
+          hover: {
+            backgroundColor: '#343a40',
+            color: '#fff',
+          },
         },
         danger: {
           backgroundColor: '#dc3545',
           color: '#fff',
+          hover: {
+            backgroundColor: '#dc3545',
+            color: '#fff',
+          },
         },
         warning: {
           backgroundColor: '#ffc107',
           color: '#212529',
+          hover: {
+            backgroundColor: '#ffc107',
+            color: '#212529',
+          },
         },
         success: {
           backgroundColor: '#28a745',
           color: '#fff',
+          hover: {
+            backgroundColor: '#28b845',
+            color: '#fff',
+          },
         },
         clear: {
           color: '#000000',
+          hover: {
+            color: '#4b4b4b',
+          },
         },
 
         // Size variants
         xs: {
           padding: {
             top: '0.25rem',
-            right: '0.5rem',
+            right: '0.75rem',
             bottom: '0.25rem',
-            left: '0.5rem',
+            left: '0.75rem',
           },
           gap: '0.125rem',
-          borderRadius: '9999px',
-          fontWeight: '400',
           fontSize: '0.75rem',
+          borderRadius: '0.5rem',
+          icon: {
+            width: '0.75rem',
+            height: '.75rem',
+          },
         },
         sm: {
           padding: {
@@ -168,9 +246,12 @@ export default plugin.withOptions(() => ({ addComponents, theme }) => {
             left: '1rem',
           },
           gap: '0.25rem',
-          borderRadius: '9999px',
-          fontWeight: '400',
           fontSize: '0.875rem',
+          borderRadius: '0.5rem',
+          icon: {
+            width: '1rem',
+            height: '1rem',
+          },
         },
         lg: {
           padding: {
@@ -180,9 +261,12 @@ export default plugin.withOptions(() => ({ addComponents, theme }) => {
             left: '2rem',
           },
           gap: '0.75rem',
-          borderRadius: '9999px',
-          fontWeight: '500',
           fontSize: '1.25rem',
+          borderRadius: '1rem',
+          icon: {
+            width: '1.5rem',
+            height: '1.5rem',
+          },
         },
       },
     },

@@ -17,6 +17,9 @@ export default {
             backgroundColor: theme('colors.blue.500'),
             color: '#fff',
           },
+          clear: {
+            color: theme('colors.gray.500'),
+          },
         },
       }),
     },

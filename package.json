@@ -30,6 +30,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.1.5",
     "@nuxt/kit": "^3.13.2",
     "tailwindcss": "^3.4.14",
     "vue": "^3.5.12"
