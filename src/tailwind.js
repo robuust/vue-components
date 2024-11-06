@@ -10,7 +10,7 @@ import plugin from 'tailwindcss/plugin';
  *
  * @returns {void}
  */
-export default plugin(() => ({ addComponents, theme }) => {
+export default plugin.withOptions(() => ({ addComponents, theme }) => {
   addComponents({
     '.button': {
       '@apply inline-flex items-center justify-center text-center': {},
