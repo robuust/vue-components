@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12 bg-stone-950">
+  <div class="py-12">
     <div class="container px-3 mx-auto flex flex-wrap gap-3 items-center">
       <ButtonBase
         label="Primary"

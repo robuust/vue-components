@@ -34,7 +34,7 @@ defineProps({
   color: {
     type: String,
     default: 'primary',
-    validator: (value) => /^(primary|secondary|tertiary|light|dark|danger|warning|success)(-flat)?$/.test(value) || value.startsWith('custom-') || 'clear',
+    validator: (value) => /^(primary|secondary|tertiary|light|dark|danger|warning|success)(-soft)?$/.test(value) || value.startsWith('custom-') || 'clear',
   },
 });
 </script>
