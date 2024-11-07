@@ -108,6 +108,54 @@ module.exports = {
 
 With this configuration, you can create a custom theme for buttons and other components. Each project can apply its own colors and style variants by simply adjusting these values.
 
+
+### Setup custom button classes and styling
+
+You also can define **custom** color button classes and styling. You can set `backgroundColor`, `color`, `hoverBackgroundColor`, `hoverColor` and additional `styles: {}` and `hoverStyles: {}` within the `custom` key:
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      components: (theme) => ({
+        button: {
+         custom: {
+            foo: {
+              backgroundColor: theme('colors.pink.500'),
+              color: theme('colors.white'),
+              hoverBackgroundColor: theme('colors.pink.600'),
+              hoverColor: theme('colors.white'),
+              styles: {},
+              hoverStyles: {},
+            },
+            bar: {
+              backgroundColor: theme('colors.teal.500'),
+              color: theme('colors.white'),
+              hoverBackgroundColor: theme('colors.teal.600'),
+              hoverColor: theme('colors.white'),
+              styles: {},
+              hoverStyles: {},
+            },
+          },
+        },
+      }),
+    },
+  },
+};
+```
+
+```vue
+<template>
+  <ButtonBase color="custom-foo" label="Custom Foo Button" />
+  <ButtonBase color="custom-bar" label="Custom Bar Button" />
+</template>
+
+<script setup>
+import { ButtonBase } from '@rutgerbakker95/vue-components';
+</script>
+```
+
 ## Development
 
 To contribute or make adjustments:

@@ -7,21 +7,28 @@ export default {
   ],
   theme: {
     extend: {
-      // components: (theme) => ({
-      //   button: {
-      //     primary: {
-      //       backgroundColor: theme('colors.red.500'),
-      //       color: '#000',
-      //     },
-      //     secondary: {
-      //       backgroundColor: theme('colors.blue.500'),
-      //       color: '#fff',
-      //     },
-      //     clear: {
-      //       color: theme('colors.gray.500'),
-      //     },
-      //   },
-      // }),
+      components: (theme) => ({
+        button: {
+          custom: {
+            foo: {
+              backgroundColor: theme('colors.pink.500'),
+              color: theme('colors.white'),
+              hoverBackgroundColor: theme('colors.pink.600'),
+              hoverColor: theme('colors.white'),
+              styles: {},
+              hoverStyles: {},
+            },
+            bar: {
+              backgroundColor: theme('colors.teal.500'),
+              color: theme('colors.white'),
+              hoverBackgroundColor: theme('colors.teal.600'),
+              hoverColor: theme('colors.white'),
+              styles: {},
+              hoverStyles: {},
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [components],

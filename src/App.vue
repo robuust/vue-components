@@ -7,8 +7,20 @@
         :icon="BeakerIcon"
       />
       <ButtonBase
+        label="Primary soft"
+        size="lg"
+        :icon="BeakerIcon"
+        color="primary-soft"
+      />
+      <ButtonBase
         label="Secondary"
         color="secondary"
+        size="base"
+        :icon="BeakerIcon"
+      />
+      <ButtonBase
+        label="Secondary soft"
+        color="secondary-soft"
         size="base"
         :icon="BeakerIcon"
       />
@@ -17,6 +29,36 @@
         color="tertiary"
         size="sm"
         :icon="BeakerIcon"
+      />
+      <ButtonBase
+        label="Tertiary soft"
+        color="tertiary-soft"
+        size="sm"
+        :icon="BeakerIcon"
+      />
+      <ButtonBase
+        label="Danger"
+        color="danger"
+      />
+      <ButtonBase
+        label="Danger soft"
+        color="danger-soft"
+      />
+      <ButtonBase
+        label="Warning"
+        color="warning"
+      />
+      <ButtonBase
+        label="Warning soft"
+        color="warning-soft"
+      />
+      <ButtonBase
+        label="Success"
+        color="success"
+      />
+      <ButtonBase
+        label="Success soft"
+        color="success-soft"
       />
       <ButtonBase
         label="Light"
@@ -29,20 +71,16 @@
         color="dark"
       />
       <ButtonBase
-        label="Danger"
-        color="danger"
-      />
-      <ButtonBase
-        label="Warning"
-        color="warning"
-      />
-      <ButtonBase
-        label="Success"
-        color="success"
-      />
-      <ButtonBase
         label="Clear"
         color="clear"
+      />
+      <ButtonBase
+        label="Custom color foo"
+        color="custom-foo"
+      />
+      <ButtonBase
+        label="Custom color bar"
+        color="custom-bar"
       />
     </div>
   </div>
