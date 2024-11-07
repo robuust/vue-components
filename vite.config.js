@@ -14,7 +14,7 @@ export default defineConfig({
     eslintPlugin(),
     viteStaticCopy({
       targets: [
-        { src: 'src/tailwind.js', dest: '' },
+        { src: 'src/tailwind', dest: '' },
         { src: 'src/nuxt-module.js', dest: '' },
       ],
     }),
