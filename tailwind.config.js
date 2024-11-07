@@ -1,4 +1,4 @@
-import components from './src/tailwind.js';
+import components from './src/tailwind/index.js';
 
 /** @type {import('tailwindcss').Config} */
 export default {

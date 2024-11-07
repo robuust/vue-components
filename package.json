@@ -14,7 +14,7 @@
       "import": "./dist/vue-components.es.js",
       "require": "./dist/vue-components.umd.js"
     },
-    "./tailwind": "./dist/tailwind.js",
+    "./tailwind": "./dist/tailwind/index.js",
     "./nuxt": "./dist/nuxt-module.js"
   },
   "scripts": {
