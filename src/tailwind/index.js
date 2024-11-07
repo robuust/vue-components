@@ -1,5 +1,3 @@
-// src/tailwind/index.js
-
 import plugin from 'tailwindcss/plugin';
 
 // Components
