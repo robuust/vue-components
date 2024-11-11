@@ -2,6 +2,7 @@
 import path from 'node:path';
 import { defineConfig } from 'vitest/config';
 import Vue from '@vitejs/plugin-vue';
+import svgLoader from 'vite-svg-loader';
 
 export default defineConfig({
   resolve: {
@@ -11,6 +12,7 @@ export default defineConfig({
   },
   plugins: [
     Vue(),
+    svgLoader(),
   ],
   test: {
     globals: true,
