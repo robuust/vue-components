@@ -6,9 +6,9 @@ A modern and customizable component library built with **Vue 3** and **Tailwind 
 
 - ✨ **Vue 3 Components**: Carefully crafted components that work seamlessly with Vue 3
 - 💎 **Tailwind CSS Integration**: Leverage Tailwind CSS for styling, with full theme customization support
-- 🚀 **Theming & Customization**: Tailor components to your project’s branding directly from the `tailwind.config.js`
+- 🎨 **Theming & Customization**: Tailor components to your project’s branding directly from the `tailwind.config.js`
 - 🖖🏽 **Accessibility First**: Components are designed with accessibility in mind, ensuring compliance with best practices
-- 📦 **Nuxt 3 module available**
+- 📦 **Nuxt 3 module available**: Easily integrate with Nuxt 3 projects for seamless server-side rendering and enhanced performance
 
 ## Installation
 
