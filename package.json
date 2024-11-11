@@ -1,6 +1,6 @@
 {
-  "name": "@rutgerbakker95/vue-components",
-  "version": "1.0.0-beta.21",
+  "name": "@robuust/vue-components",
+  "version": "1.0.0-rc.1",
   "type": "module",
   "main": "dist/vue-components.umd.js",
   "module": "dist/vue-components.es.js",

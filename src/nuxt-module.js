@@ -1,5 +1,5 @@
 import { defineNuxtModule, addComponent } from '@nuxt/kit';
-import * as components from '@rutgerbakker95/vue-components';
+import * as components from '@robuust/vue-components';
 import pkg from '../package.json';
 
 /**
@@ -17,7 +17,7 @@ export default defineNuxtModule({
     Object.keys(components).forEach((name) => {
       addComponent({
         name,
-        filePath: '@rutgerbakker95/vue-components',
+        filePath: '@robuust/vue-components',
         export: name,
         global: true,
       });
