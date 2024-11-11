@@ -9,8 +9,8 @@
 
 html.dark {
   --vp-c-brand-1: #d9ff00;
-  --vp-c-bg: #212121;
+  --vp-c-bg: #0c0c0c;
   --vp-c-text-1: #ffffff;
-  --vp-c-bg-soft: #2b2b2b;
-  --vp-c-text-1: #a0a0a0;
+  --vp-c-bg-soft: #1a1a1a;
+  --vp-c-text-1: #ffffff;
 }
