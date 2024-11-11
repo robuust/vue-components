@@ -1,9 +1,18 @@
 <template>
-  <div class="py-12">
-    <div class="container px-3 mx-auto flex flex-wrap gap-3 items-center">
+  <div class="py-12 container px-3 mx-auto">
+    <h1 class="text-3xl font-bold mb-4">
+      Components
+    </h1>
+
+    <h3 class="text-stone-600 font-semibold text-2xl mb-3">
+      ButtonBase
+    </h3>
+
+    <div class="flex flex-wrap gap-3 items-center">
       <ButtonBase
         label="Primary"
         size="lg"
+        icon-left
         :icon="BeakerIcon"
       />
       <ButtonBase

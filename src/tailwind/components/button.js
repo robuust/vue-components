@@ -21,7 +21,7 @@ export default (theme) => {
 
   return {
     '.button': {
-      '@apply inline-flex items-center justify-center text-center h-fit border border-transparent': {},
+      '@apply inline-flex items-center justify-center text-center h-fit border border-transparent relative': {},
       paddingTop: theme('padding.2'),
       paddingRight: theme('padding.4'),
       paddingBottom: theme('padding.2'),
@@ -31,6 +31,9 @@ export default (theme) => {
       fontWeight: theme('fontWeight.medium'),
       fontSize: theme('fontSize.base'),
       whiteSpace: theme('whitespace.normal'),
+      transitionProperty: theme('transitionProperty.colors'),
+      transitionDuration: theme('transitionDuration.300'),
+      transitionTimingFunction: theme('transitionTimingFunction.DEFAULT'),
       ...theme('components.button'),
 
       // Icon styling

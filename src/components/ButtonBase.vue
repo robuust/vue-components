@@ -1,7 +1,7 @@
 <template>
   <Component
     :is="as"
-    :class="['button', `button-${color}`, `button-${size}`]"
+    :class="['button', `button-${color}`, `button-${size}`, { 'flex-row-reverse': iconLeft }]"
   >
     {{ label }}
     <Component
@@ -25,6 +25,9 @@ defineProps({
   icon: {
     type: [Object, Function],
     default: null,
+  },
+  iconLeft: {
+    type: Boolean,
   },
   size: {
     type: String,
