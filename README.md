@@ -1,4 +1,4 @@
-# @rutgerbakker95/vue-components
+# @robuust/vue-components
 
 A modern and customizable component library built with **Vue 3** and **Tailwind CSS**, designed to deliver a flexible, cohesive UI experience across all projects. Quickly integrate reusable components with ease, and customize them to suit your unique branding needs.
 
@@ -15,14 +15,14 @@ A modern and customizable component library built with **Vue 3** and **Tailwind 
 1. **Install the component library via yarn:**
 
 ```bash
-yarn add @rutgerbakker95/vue-components
+yarn add @robuust/vue-components
 ```
 
 2. **Add the component library plugin to your `tailwind.config.js`:**
 
 ```javascript
 // tailwind.config.js
-import components from '@rutgerbakker95/vue-components/src/tailwind';
+import components from '@robuust/vue-components/src/tailwind';
 
 export default {
   theme: {
@@ -52,7 +52,7 @@ export default {
 
 ```javascript
 export default defineNuxtConfig({
-  modules: ['@rutgerbakker95/vue-components/nuxt'],
+  modules: ['@robuust/vue-components/nuxt'],
 });
 ```
 
@@ -68,7 +68,7 @@ Import and use components in your Vue 3 project with ease. Here’s an example o
 </template>
 
 <script setup>
-import { ButtonBase } from '@rutgerbakker95/vue-components';
+import { ButtonBase } from '@robuust/vue-components';
 </script>
 ```
 
@@ -152,7 +152,7 @@ module.exports = {
 </template>
 
 <script setup>
-import { ButtonBase } from '@rutgerbakker95/vue-components';
+import { ButtonBase } from '@robuust/vue-components';
 </script>
 ```
 
@@ -163,7 +163,7 @@ To contribute or make adjustments:
 1. **Clone the repository** and install dependencies:
 
 ```bash
-git clone https://github.com/rutgerbakker95/vue-components.git
+git clone https://github.com/robuust/vue-components.git
 cd component-library
 yarn install
 ```
@@ -183,7 +183,7 @@ yarn build
 
 ## License
 
-MIT © Rutger Bakker
+MIT © Robuust Digital
 
 
-*With `@rutgerbakker95/vue-components`, bring consistency, flexibility, and a polished look to all your Vue 3 applications.*
+*With `@robuust/vue-components`, bring consistency, flexibility, and a polished look to all your Vue 3 applications.*
