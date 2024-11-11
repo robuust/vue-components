@@ -8,11 +8,11 @@ hero:
   tagline: A modern and customizable component library built with <strong>Vue 3</strong> and <strong>Tailwind CSS</strong>.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Discover components
+      link: /components
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Getting started
+      link: /guide
 
 features:
   - title: ✨ Vue 3 Components
