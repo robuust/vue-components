@@ -1,4 +1,4 @@
 - [ ] I updated the changelog
-- [ ] I updated the schema
+- [ ] I updated the docs
 - [ ] I wrote tests
 - [ ] I am proud of my code
