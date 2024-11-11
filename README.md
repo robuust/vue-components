@@ -10,6 +10,10 @@ A modern and customizable component library built with **Vue 3** and **Tailwind 
 - 🖖🏽 **Accessibility First**: Components are designed with accessibility in mind, ensuring compliance with best practices
 - 📦 **Nuxt 3 module available**: Easily integrate with Nuxt 3 projects for seamless server-side rendering and enhanced performance
 
+## Docs
+
+[**See online docs**](https://robuust-vue-components.netlify.app/)
+
 ## Installation
 
 1. **Install the component library via yarn:**
