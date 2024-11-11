@@ -4,15 +4,25 @@
     :class="['button', `button-${color}`, `button-${size}`, { 'flex-row-reverse': iconLeft }]"
   >
     {{ label }}
-    <Component
-      :is="icon"
-      v-if="icon"
-      class="button-icon"
-    />
+    <slot name="icon">
+      <Component
+        :is="icon"
+        v-if="icon && !spinning"
+        class="button-icon"
+      />
+    </slot>
+    <slot name="spinner">
+      <SpinnerIcon
+        v-if="spinning"
+        class="button-icon animate-spin"
+      />
+    </slot>
   </Component>
 </template>
 
 <script setup>
+import SpinnerIcon from '@/assets/img/svg/icon-spinner.svg';
+
 defineProps({
   as: {
     type: [String, Object, Function],
@@ -33,6 +43,9 @@ defineProps({
     type: String,
     default: 'base',
     validator: (value) => ['xs', 'sm', 'base', 'lg'].includes(value),
+  },
+  spinning: {
+    type: Boolean,
   },
   color: {
     type: String,

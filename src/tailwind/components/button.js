@@ -39,7 +39,6 @@ export default (theme) => {
       // Icon styling
       '.button-icon': {
         '@apply block': {},
-        fill: theme('fill.current'),
         width: theme('width.5'),
         height: theme('height.5'),
         flexShrink: theme('flexShrink.0'),

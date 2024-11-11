@@ -31,6 +31,7 @@
         label="Secondary soft"
         color="secondary-soft"
         size="base"
+        spinning
         :icon="BeakerIcon"
       />
       <ButtonBase
