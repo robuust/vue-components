@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12 container px-3 mx-auto">
+  <div class="py-12 container px-12 mx-auto">
     <h1 class="text-3xl font-bold mb-4">
       Components
     </h1>
@@ -8,7 +8,7 @@
       ButtonBase
     </h3>
 
-    <div class="flex flex-wrap gap-3 items-center">
+    <div class="flex flex-wrap gap-3 items-center mb-5">
       <ButtonBase
         label="Primary"
         size="lg"
@@ -94,10 +94,34 @@
         color="custom-bar"
       />
     </div>
+
+    <h3 class="text-stone-600 font-semibold text-2xl mb-3">
+      Drawer
+    </h3>
+
+    <ButtonBase
+      label="Open drawer"
+      color="light"
+      size="xs"
+      @click="drawerOpen = true"
+    />
+
+    <Drawer
+      :show="drawerOpen"
+      title="Drawer title"
+      show-close
+      @drawer:close="drawerOpen = false"
+    >
+      <!-- Drawer's content -->
+    </Drawer>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { BeakerIcon } from '@heroicons/vue/24/solid';
 import ButtonBase from '@/components/ButtonBase.vue';
+import Drawer from '@/components/Drawer.vue';
+
+const drawerOpen = ref(false);
 </script>

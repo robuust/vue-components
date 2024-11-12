@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
 import ButtonBase from './components/ButtonBase.vue';
+import Drawer from './components/Drawer.vue';
 
-export { ButtonBase };
+export { ButtonBase, Drawer };
