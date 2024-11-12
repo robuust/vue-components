@@ -16,17 +16,21 @@ A modern and customizable component library built with **Vue 3** and **Tailwind 
 
 ## Installation
 
-1. **Install the component library via yarn:**
+1. **Install the component library via yarn or npm:**
 
 ```bash
-yarn add @robuust/vue-components
+yarn add @robuust-digital/vue-components
+```
+
+```bash
+npm i @robuust-digital/vue-components
 ```
 
 2. **Add the component library plugin to your `tailwind.config.js`:**
 
 ```javascript
 // tailwind.config.js
-import components from '@robuust/vue-components/src/tailwind';
+import components from '@robuust-digital/vue-components/tailwind';
 
 export default {
   theme: {
@@ -56,7 +60,7 @@ export default {
 
 ```javascript
 export default defineNuxtConfig({
-  modules: ['@robuust/vue-components/nuxt'],
+  modules: ['@robuust-digital/vue-components/nuxt'],
 });
 ```
 
@@ -72,7 +76,7 @@ Import and use components in your Vue 3 project with ease. Here’s an example o
 </template>
 
 <script setup>
-import { ButtonBase } from '@robuust/vue-components';
+import { ButtonBase } from '@robuust-digital/vue-components';
 </script>
 ```
 
@@ -156,7 +160,7 @@ module.exports = {
 </template>
 
 <script setup>
-import { ButtonBase } from '@robuust/vue-components';
+import { ButtonBase } from '@robuust-digital/vue-components';
 </script>
 ```
 
@@ -190,4 +194,4 @@ yarn build
 MIT © Robuust Digital
 
 
-*With `@robuust/vue-components`, bring consistency, flexibility, and a polished look to all your Vue 3 applications.*
+*With `@robuust-digital/vue-components`, bring consistency, flexibility, and a polished look to all your Vue 3 applications.*
