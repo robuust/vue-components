@@ -2,6 +2,21 @@
   "name": "@robuust/vue-components",
   "version": "1.0.0-rc.1",
   "type": "module",
+  "description": "A modern and customizable component library built with **Vue 3** and **Tailwind CSS**, designed to deliver a flexible, cohesive UI experience across all projects. Quickly integrate reusable components with ease, and customize them to suit your unique branding needs.",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robuust/vue-components.git"
+  },
+  "author": "Robuust Digital",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robuust/vue-components/issues"
+  },
+  "homepage": "https://github.com/robuust/vue-components#readme",
   "main": "dist/vue-components.umd.js",
   "module": "dist/vue-components.es.js",
   "files": [
@@ -23,14 +38,11 @@
     "preview": "vite preview",
     "test:unit": "vitest run",
     "lint": "eslint . --fix",
-    "npm:login": "npm login --registry=https://npm.pkg.github.com",
+    "npm:login": "npm login",
     "npm:publish": "npm publish --access public",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.5",
