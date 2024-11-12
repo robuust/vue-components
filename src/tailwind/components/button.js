@@ -36,6 +36,13 @@ export default (theme) => {
       transitionTimingFunction: theme('transitionTimingFunction.DEFAULT'),
       ...theme('components.button'),
 
+      // Disabled state
+      '&:disabled': {
+        '@apply pointer-events-none': {},
+        opacity: theme('opacity.50'),
+        ...theme('components.button.disabled'),
+      },
+
       // Icon styling
       '.button-icon': {
         '@apply block': {},
@@ -61,6 +68,10 @@ export default (theme) => {
           color: theme('colors.black'),
           ...theme('components.button.primary.hover'),
         },
+
+        '&:disabled': {
+          ...theme('components.button.primary.disabled'),
+        },
       },
       '&.button-primary-soft': {
         backgroundColor: theme('colors.lime.200'),
@@ -71,6 +82,10 @@ export default (theme) => {
           backgroundColor: theme('colors.lime.300'),
           color: theme('colors.700'),
           ...theme('components.button.primary-soft.hover'),
+        },
+
+        '&:disabled': {
+          ...theme('components.button.primary-soft.disabled'),
         },
       },
       '&.button-secondary': {
@@ -83,6 +98,10 @@ export default (theme) => {
           color: theme('colors.white'),
           ...theme('components.button.secondary.hover'),
         },
+
+        '&:disabled': {
+          ...theme('components.button.secondary.disabled'),
+        },
       },
       '&.button-secondary-soft': {
         backgroundColor: theme('colors.indigo.200'),
@@ -93,6 +112,10 @@ export default (theme) => {
           backgroundColor: theme('colors.indigo.300'),
           color: theme('colors.700'),
           ...theme('components.button.secondary-soft.hover'),
+        },
+
+        '&:disabled': {
+          ...theme('components.button.secondary-soft.disabled'),
         },
       },
       '&.button-tertiary': {
@@ -105,6 +128,10 @@ export default (theme) => {
           color: theme('colors.black'),
           ...theme('components.button.tertiary.hover'),
         },
+
+        '&:disabled': {
+          ...theme('components.button.tertiary.disabled'),
+        },
       },
       '&.button-tertiary-soft': {
         backgroundColor: theme('colors.orange.200'),
@@ -115,6 +142,10 @@ export default (theme) => {
           backgroundColor: theme('colors.orange.300'),
           color: theme('colors.700'),
           ...theme('components.button.tertiary-soft.hover'),
+        },
+
+        '&:disabled': {
+          ...theme('components.button.tertiary-soft.disabled'),
         },
       },
       '&.button-light': {
@@ -128,6 +159,10 @@ export default (theme) => {
           color: theme('colors.stone.900'),
           ...theme('components.button.light.hover'),
         },
+
+        '&:disabled': {
+          ...theme('components.button.light.disabled'),
+        },
       },
       '&.button-dark': {
         backgroundColor: theme('colors.black'),
@@ -138,6 +173,10 @@ export default (theme) => {
           backgroundColor: theme('colors.stone.800'),
           color: theme('colors.white'),
           ...theme('components.button.dark.hover'),
+        },
+
+        '&:disabled': {
+          ...theme('components.button.dark.disabled'),
         },
       },
       '&.button-danger': {
@@ -150,6 +189,10 @@ export default (theme) => {
           color: theme('colors.white'),
           ...theme('components.button.danger.hover'),
         },
+
+        '&:disabled': {
+          ...theme('components.button.danger.disabled'),
+        },
       },
       '&.button-danger-soft': {
         backgroundColor: theme('colors.red.200'),
@@ -160,6 +203,10 @@ export default (theme) => {
           backgroundColor: theme('colors.red.300'),
           color: theme('colors.700'),
           ...theme('components.button.danger-soft.hover'),
+        },
+
+        '&:disabled': {
+          ...theme('components.button.danger-soft.disabled'),
         },
       },
       '&.button-warning': {
@@ -172,6 +219,10 @@ export default (theme) => {
           color: theme('colors.black'),
           ...theme('components.button.warning.hover'),
         },
+
+        '&:disabled': {
+          ...theme('components.button.warning.disabled'),
+        },
       },
       '&.button-warning-soft': {
         backgroundColor: theme('colors.yellow.200'),
@@ -182,6 +233,10 @@ export default (theme) => {
           backgroundColor: theme('colors.yellow.300'),
           color: theme('colors.700'),
           ...theme('components.button.warning-soft.hover'),
+        },
+
+        '&:disabled': {
+          ...theme('components.button.warning-soft.disabled'),
         },
       },
       '&.button-success': {
@@ -194,6 +249,10 @@ export default (theme) => {
           color: theme('colors.white'),
           ...theme('components.button.success.hover'),
         },
+
+        '&:disabled': {
+          ...theme('components.button.success.disabled'),
+        },
       },
       '&.button-success-soft': {
         backgroundColor: theme('colors.green.200'),
@@ -205,6 +264,10 @@ export default (theme) => {
           color: theme('colors.700'),
           ...theme('components.button.success-soft.hover'),
         },
+
+        '&:disabled': {
+          ...theme('components.button.success-soft.disabled'),
+        },
       },
       '&.button-clear': {
         '@apply bg-transparent px-0': {},
@@ -214,6 +277,10 @@ export default (theme) => {
         '&:hover': {
           color: theme('colors.stone.800'),
           ...theme('components.button.clear.hover'),
+        },
+
+        '&:disabled': {
+          ...theme('components.button.clear.disabled'),
         },
       },
       ...customColorStyles,
