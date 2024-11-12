@@ -77,6 +77,10 @@ export default (theme) => {
         '&:disabled': {
           ...theme('components.button.primary.disabled'),
         },
+
+        '.button-icon': {
+          ...theme('components.button.primary.icon'),
+        },
       },
       '&.button-primary-soft': {
         backgroundColor: theme('colors.lime.200'),
@@ -91,6 +95,10 @@ export default (theme) => {
 
         '&:disabled': {
           ...theme('components.button.primary-soft.disabled'),
+        },
+
+        '.button-icon': {
+          ...theme('components.button.primary-soft.icon'),
         },
       },
       '&.button-secondary': {
@@ -107,6 +115,10 @@ export default (theme) => {
         '&:disabled': {
           ...theme('components.button.secondary.disabled'),
         },
+
+        '.button-icon': {
+          ...theme('components.button.secondary.icon'),
+        },
       },
       '&.button-secondary-soft': {
         backgroundColor: theme('colors.indigo.200'),
@@ -121,6 +133,10 @@ export default (theme) => {
 
         '&:disabled': {
           ...theme('components.button.secondary-soft.disabled'),
+        },
+
+        '.button-icon': {
+          ...theme('components.button.secondary-soft.icon'),
         },
       },
       '&.button-tertiary': {
@@ -137,6 +153,10 @@ export default (theme) => {
         '&:disabled': {
           ...theme('components.button.tertiary.disabled'),
         },
+
+        '.button-icon': {
+          ...theme('components.button.tertiary.icon'),
+        },
       },
       '&.button-tertiary-soft': {
         backgroundColor: theme('colors.orange.200'),
@@ -151,6 +171,10 @@ export default (theme) => {
 
         '&:disabled': {
           ...theme('components.button.tertiary-soft.disabled'),
+        },
+
+        '.button-icon': {
+          ...theme('components.button.tertiary-soft.icon'),
         },
       },
       '&.button-light': {
@@ -168,6 +192,10 @@ export default (theme) => {
         '&:disabled': {
           ...theme('components.button.light.disabled'),
         },
+
+        '.button-icon': {
+          ...theme('components.button.light.icon'),
+        },
       },
       '&.button-dark': {
         backgroundColor: theme('colors.black'),
@@ -182,6 +210,10 @@ export default (theme) => {
 
         '&:disabled': {
           ...theme('components.button.dark.disabled'),
+        },
+
+        '.button-icon': {
+          ...theme('components.button.dark.icon'),
         },
       },
       '&.button-danger': {
@@ -198,6 +230,10 @@ export default (theme) => {
         '&:disabled': {
           ...theme('components.button.danger.disabled'),
         },
+
+        '.button-icon': {
+          ...theme('components.button.danger.icon'),
+        },
       },
       '&.button-danger-soft': {
         backgroundColor: theme('colors.red.200'),
@@ -212,6 +248,10 @@ export default (theme) => {
 
         '&:disabled': {
           ...theme('components.button.danger-soft.disabled'),
+        },
+
+        '.button-icon': {
+          ...theme('components.button.danger-soft.icon'),
         },
       },
       '&.button-warning': {
@@ -228,6 +268,10 @@ export default (theme) => {
         '&:disabled': {
           ...theme('components.button.warning.disabled'),
         },
+
+        '.button-icon': {
+          ...theme('components.button.warning.icon'),
+        },
       },
       '&.button-warning-soft': {
         backgroundColor: theme('colors.yellow.200'),
@@ -242,6 +286,10 @@ export default (theme) => {
 
         '&:disabled': {
           ...theme('components.button.warning-soft.disabled'),
+        },
+
+        '.button-icon': {
+          ...theme('components.button.warning-soft.icon'),
         },
       },
       '&.button-success': {
@@ -258,6 +306,10 @@ export default (theme) => {
         '&:disabled': {
           ...theme('components.button.success.disabled'),
         },
+
+        '.button-icon': {
+          ...theme('components.button.success.icon'),
+        },
       },
       '&.button-success-soft': {
         backgroundColor: theme('colors.green.200'),
@@ -273,6 +325,10 @@ export default (theme) => {
         '&:disabled': {
           ...theme('components.button.success-soft.disabled'),
         },
+
+        '.button-icon': {
+          ...theme('components.button.success-soft.icon'),
+        },
       },
       '&.button-clear': {
         '@apply bg-transparent px-0': {},
@@ -286,6 +342,10 @@ export default (theme) => {
 
         '&:disabled': {
           ...theme('components.button.clear.disabled'),
+        },
+
+        '.button-icon': {
+          ...theme('components.button.clear.icon'),
         },
       },
       ...customColorStyles,
