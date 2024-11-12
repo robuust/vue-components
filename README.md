@@ -1,4 +1,4 @@
-# @robuust/vue-components
+# Robuust Vue 3 Components
 
 A modern and customizable component library built with **Vue 3** and **Tailwind CSS**, designed to deliver a flexible, cohesive UI experience across all projects. Quickly integrate reusable components with ease, and customize them to suit your unique branding needs.
 
