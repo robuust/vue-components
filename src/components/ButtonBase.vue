@@ -1,7 +1,7 @@
 <template>
   <Component
     :is="as"
-    :class="['button', `button-${color}`, `button-${size}`, { 'flex-row-reverse': iconLeft }]"
+    :class="['button', `button-${color}`, `button-${size}`, { 'button-reverse': iconLeft }]"
   >
     {{ label }}
     <slot name="icon">

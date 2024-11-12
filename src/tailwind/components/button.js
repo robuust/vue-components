@@ -29,8 +29,8 @@ export default (theme) => {
       gap: theme('gap.2'),
       borderRadius: theme('borderRadius.xl'),
       fontWeight: theme('fontWeight.medium'),
-      fontSize: theme('fontSize.base'),
-      whiteSpace: theme('whitespace.normal'),
+      fontSize: theme('fontSize.base.0'),
+      whiteSpace: 'nowrap',
       transitionProperty: theme('transitionProperty.colors'),
       transitionDuration: theme('transitionDuration.300'),
       transitionTimingFunction: theme('transitionTimingFunction.DEFAULT'),
@@ -43,6 +43,11 @@ export default (theme) => {
         height: theme('height.5'),
         flexShrink: theme('flexShrink.0'),
         ...theme('components.button.icon'),
+      },
+
+      // Reverse icon
+      '&.button-reverse': {
+        '@apply flex-row-reverse': {},
       },
 
       // Color variants
@@ -222,7 +227,7 @@ export default (theme) => {
         gap: theme('gap[1.5]'),
         borderRadius: theme('borderRadius.md'),
         fontWeight: theme('fontWeight.medium'),
-        fontSize: theme('fontSize.xs'),
+        fontSize: theme('fontSize.xs.0'),
         ...theme('components.button.xs'),
 
         '.button-icon': {
@@ -239,7 +244,7 @@ export default (theme) => {
         gap: theme('gap.2'),
         borderRadius: theme('borderRadius.lg'),
         fontWeight: theme('fontWeight.medium'),
-        fontSize: theme('fontSize.sm'),
+        fontSize: theme('fontSize.sm.0'),
         ...theme('components.button.sm'),
 
         '.button-icon': {
@@ -256,7 +261,7 @@ export default (theme) => {
         gap: theme('gap.4'),
         borderRadius: theme('borderRadius.2xl'),
         fontWeight: theme('fontWeight.medium'),
-        fontSize: theme('fontSize.lg'),
+        fontSize: theme('fontSize.lg.0'),
         ...theme('components.button.lg'),
 
         '.button-icon': {
