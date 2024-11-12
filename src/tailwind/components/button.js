@@ -52,7 +52,7 @@ export default (theme) => {
         ...theme('components.button.icon'),
 
         '&.button-icon-loading': {
-          animation: theme('animation.spin'),
+          '@apply animate-spin': {},
           ...theme('components.button.icon.loading'),
         },
       },
