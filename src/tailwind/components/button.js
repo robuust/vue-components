@@ -50,6 +50,11 @@ export default (theme) => {
         height: theme('height.5'),
         flexShrink: theme('flexShrink.0'),
         ...theme('components.button.icon'),
+
+        '&.button-icon-loading': {
+          animation: theme('animation.spin'),
+          ...theme('components.button.icon.loading'),
+        },
       },
 
       // Reverse icon
