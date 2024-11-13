@@ -5,15 +5,20 @@ permissions:
 
 on:
   pull_request:
-    branches:
-      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+concurrency: preview-${{ github.ref }}
 
 jobs:
-  build:
+  deploy-preview:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -22,12 +27,15 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
+        if: github.event.action != 'closed'
         run: yarn install
 
       - name: Build documentation
+        if: github.event.action != 'closed'
         run: yarn run docs:build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy preview
+        if: github.event.action != 'closed'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -36,13 +44,22 @@ jobs:
           user_name: github-actions
           user_email: github-actions@github.com
 
-  comment:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Post GitHub comment
+        if: github.event.action != 'closed'
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           message: |
-            Preview URL: https://robuust.github.io/vue-components/preview/${{ github.event.pull_request.number }}
+            Preview URL: https://robuust.github.io/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}
+
+      # - name: Cleanup preview
+      #   if: github.event.action == 'closed'
+      #   run: |
+      #     git config --global user.name 'github-actions'
+      #     git config --global user.email 'github-actions@github.com'
+      #     git clone --branch=gh-pages-preview https://x-access-token:${{ secrets.TOKEN }}@github.com/${{ github.repository }}.git preview
+      #     cd preview
+      #     git rm -r *
+      #     git commit -m "Cleanup preview for PR #${{ github.event.pull_request.number }}"
+      #     git push origin gh-pages-preview
+
