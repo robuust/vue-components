@@ -20,15 +20,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Clear yarn cache
         if: github.event.action != 'closed'
         run: yarn cache clean
 
-      - name: Install and Build
+      - name: Install dependencies
         if: github.event.action != 'closed'
-        run: |
-          yarn install
-          yarn run docs:build --base=/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}/
+        run: yarn install
+
+      - name: Build
+        if: github.event.action != 'closed'
+        run: yarn run docs:build --base=/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}/
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
