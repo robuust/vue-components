@@ -41,4 +41,3 @@ jobs:
           token: ${{ secrets.TOKEN }}
           message: |
             Preview available at: https://robuust.github.io/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}/
-            ![Preview](https://robuust.github.io/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}/preview.png)
