@@ -24,7 +24,7 @@ jobs:
         if: github.event.action != 'closed'
         run: |
           yarn install --frozen-lockfile
-          yarn run docs:build
+          yarn run docs:build --base=/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}/
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
