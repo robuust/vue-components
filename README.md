@@ -12,7 +12,7 @@ A modern and customizable component library built with **Vue 3** and **Tailwind 
 
 ## Docs
 
-[**See online docs**](https://robuust-vue-components.netlify.app/)
+[**See full docs here**](https://robuust-vue-components.netlify.app/)
 
 ## Installation
 
@@ -66,103 +66,9 @@ export default defineNuxtConfig({
 
 This will automatically register all components globally in your Nuxt application, making them available for immediate use.
 
-## Usage
-
-Import and use components in your Vue 3 project with ease. Here’s an example of how to use the `ButtonBase` component:
-
-```vue
-<template>
-  <ButtonBase color="primary" label="Click Me" />
-</template>
-
-<script setup>
-import { ButtonBase } from '@robuust-digital/vue-components';
-</script>
-```
-
-### Props
-
-- `label`: `String` – Button text label. Default is an empty string.
-- `color`: `String` – Button color, accepts primary, secondary, or light. Default is primary.
-- `as`: `String | Object | Function` – Render as a different component (e.g., NuxtLink or a). Default is `button`.
-
-## Customizing with Tailwind CSS
-
-Tailor component styles by overriding default values in `tailwind.config.js`. This allows you to establish a consistent design system across projects:
-
-```javascript
-// tailwind.config.js
-module.exports = {
-  theme: {
-    extend: {
-      components: (theme) => ({
-        button: {
-          primary: {
-            backgroundColor: theme('colors.yellow.500'),
-            color: '#000',
-          },
-          secondary: {
-            backgroundColor: theme('colors.blue.500'),
-            color: '#fff',
-          },
-        },
-      }),
-    },
-  },
-};
-```
-
 ### Example Tailwind Configuration
 
-With this configuration, you can create a custom theme for buttons and other components. Each project can apply its own colors and style variants by simply adjusting these values.
-
-
-### Setup custom button classes and styling
-
-You also can define **custom** color button classes and styling. You can set `backgroundColor`, `color`, `hoverBackgroundColor`, `hoverColor` and additional `styles: {}` and `hoverStyles: {}` within the `custom` key:
-
-```javascript
-// tailwind.config.js
-module.exports = {
-  theme: {
-    extend: {
-      components: (theme) => ({
-        button: {
-         custom: {
-            foo: {
-              backgroundColor: theme('colors.pink.500'),
-              color: theme('colors.white'),
-              hoverBackgroundColor: theme('colors.pink.600'),
-              hoverColor: theme('colors.white'),
-              styles: {},
-              hoverStyles: {},
-            },
-            bar: {
-              backgroundColor: theme('colors.teal.500'),
-              color: theme('colors.white'),
-              hoverBackgroundColor: theme('colors.teal.600'),
-              hoverColor: theme('colors.white'),
-              styles: {},
-              hoverStyles: {},
-            },
-          },
-        },
-      }),
-    },
-  },
-};
-```
-
-```vue
-<template>
-  <ButtonBase color="custom-foo" label="Custom Foo Button" />
-  <ButtonBase color="custom-bar" label="Custom Bar Button" />
-</template>
-
-<script setup>
-import { ButtonBase } from '@robuust-digital/vue-components';
-</script>
-```
+With this configuration, you can create a custom theme for all components. Each project can apply its own colors and style variants by simply adjusting these values.
 
 ## Development
 

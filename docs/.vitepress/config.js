@@ -11,11 +11,13 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Getting started', link: '/guide' },
       { text: 'Components', link: '/components' },
+      { text: 'About', link: '/about' }
     ],
 
     sidebar: [
       {
         text: 'Components',
+        link: '/components',
         items: [
           { text: 'ButtonBase', link: '/components/button-base' },
         ],
