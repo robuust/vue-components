@@ -29,10 +29,6 @@ jobs:
         if: github.event.action != 'closed'
         run: yarn install --frozen-lockfile
 
-      - name: Install @robuust-digital/vue-components
-        if: github.event.action != 'closed'
-        run: yarn add @robuust-digital/vue-components
-
       - name: Build components
         if: github.event.action != 'closed'
         run: yarn run build
