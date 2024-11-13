@@ -41,7 +41,7 @@
     "npm:login": "npm login",
     "npm:publish": "npm publish --access public",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:build": "vitepress build docs --base=/vue-components/",
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
