@@ -1,12 +1,9 @@
-name: Deploy to GitHub Pages
-
-permissions:
-  contents: write
+name: 🚀 Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - feature/gh-actions
 
 jobs:
   deploy:
@@ -28,7 +25,12 @@ jobs:
         run: yarn run docs:build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
+          folder: docs/.vitepress/dist
+          branch: gh-pages
+          clean-exclude: pr-preview
           github_token: ${{ secrets.TOKEN }}
-          publish_dir: docs/.vitepress/dist
+          token: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          force: false
