@@ -30,3 +30,6 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./docs/.vitepress/dist/
+          github-token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
