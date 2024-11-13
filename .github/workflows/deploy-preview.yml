@@ -1,0 +1,48 @@
+name: Deploy Preview
+
+permissions:
+  contents: write
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build documentation
+        run: yarn run docs:build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist
+          publish_branch: gh-pages-preview
+          user_name: github-actions
+          user_email: github-actions@github.com
+
+  comment:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post GitHub comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          message: |
+            Preview URL: https://robuust.github.io/vue-components/preview/${{ github.event.pull_request.number }}
