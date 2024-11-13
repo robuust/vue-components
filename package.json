@@ -38,14 +38,13 @@
     "preview": "vite preview",
     "test:unit": "vitest run",
     "lint": "eslint . --fix",
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs --host",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.5",
     "@nuxt/kit": "^3.13.2",
-    "@robuust-digital/vue-components": "^1.0.1-rc.1",
     "tailwindcss": "^3.4.14",
     "vue": "^3.5.12"
   },

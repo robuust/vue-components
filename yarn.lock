@@ -784,16 +784,6 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.28.tgz#d45e01c4a56f143ee69c54dd6b12eade9e270a73"
   integrity sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==
 
-"@robuust-digital/vue-components@^1.0.1-rc.1":
-  version "1.0.1-rc.1"
-  resolved "https://registry.yarnpkg.com/@robuust-digital/vue-components/-/vue-components-1.0.1-rc.1.tgz#a9d0d1b58a491093c48b47f6c3dacfae5d722f71"
-  integrity sha512-XWndi8OZGqCPn/7nOlYRtUkbIW7oTOQMSXv/u4vzOIjuf2MH1gljlZ5G5YfnC78CaXjaiJKKRhPzLXX3U0Z4JA==
-  dependencies:
-    "@heroicons/vue" "^2.1.5"
-    "@nuxt/kit" "^3.13.2"
-    tailwindcss "^3.4.14"
-    vue "^3.5.12"
-
 "@rollup/pluginutils@^4.2.1":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.2.1.tgz#e6c6c3aba0744edce3fb2074922d3776c0af2a6d"
