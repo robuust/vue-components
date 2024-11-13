@@ -1,4 +1,4 @@
-name: 🚀 Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 permissions:
   contents: write
@@ -22,7 +22,10 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
+
+      - name: Build components
+        run: yarn run build
 
       - name: Build documentation
         run: yarn run docs:build --base=/vue-components/

@@ -25,10 +25,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Clear yarn cache
-        if: github.event.action != 'closed'
-        run: yarn cache clean
-
       - name: Install dependencies
         if: github.event.action != 'closed'
         run: yarn install --frozen-lockfile
@@ -36,6 +32,10 @@ jobs:
       - name: Install @robuust-digital/vue-components
         if: github.event.action != 'closed'
         run: yarn add @robuust-digital/vue-components
+
+      - name: Build components
+        if: github.event.action != 'closed'
+        run: yarn run build
 
       - name: Build documentation
         if: github.event.action != 'closed'
