@@ -42,4 +42,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           message: |
-            Preview URL: https://<your-username>.github.io/<your-repo>/preview/${{ github.event.pull_request.number }}
+            Preview URL: https://robuust.github.io/vue-components/preview/${{ github.event.pull_request.number }}
