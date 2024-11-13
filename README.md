@@ -12,7 +12,7 @@ A modern and customizable component library built with **Vue 3** and **Tailwind 
 
 ## Docs
 
-[**See online docs**](https://robuust-vue-components.netlify.app/)
+[**See online docs**](https://robuust.github.io/vue-components)
 
 ## Installation
 
