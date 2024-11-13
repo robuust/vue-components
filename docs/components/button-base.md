@@ -1,5 +1,5 @@
 <script setup>
-import { ButtonBase } from '../../dist/vue-components.es';
+import { ButtonBase } from '@robuust-digital/vue-components';
 import { BeakerIcon } from '@heroicons/vue/24/solid';
 </script>
 
