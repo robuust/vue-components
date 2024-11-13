@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: 🚀 Deploy to GitHub Pages
 
 permissions:
   contents: write
@@ -6,7 +6,7 @@ permissions:
 on:
   push:
     branches:
-      - main
+      - feature/gh-actions
 
 jobs:
   deploy:
@@ -25,10 +25,13 @@ jobs:
         run: yarn install
 
       - name: Build documentation
-        run: yarn run docs:build
+        run: yarn run docs:build --base=/vue-components/
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.TOKEN }}
-          publish_dir: docs/.vitepress/dist
+          folder: docs/.vitepress/dist
+          branch: gh-pages
+          clean-exclude: pr-preview
+          token: ${{ secrets.TOKEN }}
+          force: false
