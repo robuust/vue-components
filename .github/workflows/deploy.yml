@@ -1,20 +1,9 @@
 name: 🚀 Deploy to GitHub Pages
 
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
-
-# on:
-#   pull_request:
-#     branches:
-#       - main
-#   push:
-#     branches:
-#       - main
+  push:
+    branches:
+      - feature/gh-actions
 
 jobs:
   deploy:
