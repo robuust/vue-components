@@ -1,8 +1,5 @@
 name: Deploy Preview
 
-permissions:
-  contents: write
-
 on:
   pull_request:
     types:
@@ -16,50 +13,17 @@ concurrency: preview-${{ github.ref }}
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
+      - name: Install and Build
         if: github.event.action != 'closed'
-        run: yarn install
-
-      - name: Build documentation
-        if: github.event.action != 'closed'
-        run: yarn run docs:build
+        run: |
+          yarn install --frozen-lockfile
+          yarn run docs:build
 
       - name: Deploy preview
-        if: github.event.action != 'closed'
-        uses: peaceiris/actions-gh-pages@v4
+        uses: rossjrw/pr-preview-action@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vitepress/dist
-          publish_branch: gh-pages-preview
-          user_name: github-actions
-          user_email: github-actions@github.com
-
-      - name: Post GitHub comment
-        if: github.event.action != 'closed'
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          message: |
-            Preview URL: https://robuust.github.io/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}
-
-      # - name: Cleanup preview
-      #   if: github.event.action == 'closed'
-      #   run: |
-      #     git config --global user.name 'github-actions'
-      #     git config --global user.email 'github-actions@github.com'
-      #     git clone --branch=gh-pages-preview https://x-access-token:${{ secrets.TOKEN }}@github.com/${{ github.repository }}.git preview
-      #     cd preview
-      #     git rm -r *
-      #     git commit -m "Cleanup preview for PR #${{ github.event.pull_request.number }}"
-      #     git push origin gh-pages-preview
-
+          source-dir: ./docs/.vitepress/dist/
