@@ -2,11 +2,19 @@ name: 🚀 Deploy to GitHub Pages
 
 on:
   pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+# on:
+#   pull_request:
+#     branches:
+#       - main
+#   push:
+#     branches:
+#       - main
 
 jobs:
   deploy:
