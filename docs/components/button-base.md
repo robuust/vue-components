@@ -1,3 +1,8 @@
+<script setup>
+import { ButtonBase } from '../../dist/vue-components.es';
+import { BeakerIcon } from '@heroicons/vue/24/solid';
+</script>
+
 # ButtonBase Component
 
 The `ButtonBase` component is a versatile button component designed with **Vue 3** and **Tailwind CSS**. It includes customizable color options, size variants, and additional configuration options to adapt to different use cases.
@@ -158,8 +163,3 @@ Use `spinning` to show a loading spinner:
 ## Accessibility
 
 The ButtonBase component is designed with accessibility in mind. Make sure to use appropriate `aria-*` attributes when necessary to enhance usability for all users.
-
-<script setup>
-import { ButtonBase } from '@robuust-digital/vue-components';
-import { BeakerIcon } from '@heroicons/vue/24/solid';
-</script>
