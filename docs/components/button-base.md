@@ -106,6 +106,8 @@ export default {
 };
 ```
 
+**Full Tailwind CSS `button` component configuration options can be found [here](/components/button-base#tailwind-config).**
+
 ## Examples
 
 ### Basic Button
@@ -163,3 +165,185 @@ Use `spinning` to show a loading spinner:
 ## Accessibility
 
 The ButtonBase component is designed with accessibility in mind. Make sure to use appropriate `aria-*` attributes when necessary to enhance usability for all users.
+
+## Tailwind Config
+
+Full Tailwind CSS `button` component configuration options can be found below:
+
+```javascript
+// tailwind.config.js
+import components from '@robuust-digital/vue-components/tailwind';
+
+export default {
+  // ...
+  theme: {
+    extend: {
+      components: (theme) => ({
+        button: {
+          primary: {
+            backgroundColor: theme('colors.lime.400'),
+            color: theme('colors.black'),
+            hover: {
+              backgroundColor: theme('colors.lime.600'),
+              color: theme('colors.black'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          'primary-soft': {
+            backgroundColor: theme('colors.lime.200'),
+            color: theme('colors.lime.600'),
+            hover: {
+              backgroundColor: theme('colors.lime.300'),
+              color: theme('colors.lime.700'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          secondary: {
+            backgroundColor: theme('colors.indigo.400'),
+            color: theme('colors.white'),
+            hover: {
+              backgroundColor: theme('colors.indigo.600'),
+              color: theme('colors.white'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          'secondary-soft': {
+            backgroundColor: theme('colors.indigo.200'),
+            color: theme('colors.indigo.600'),
+            hover: {
+              backgroundColor: theme('colors.indigo.300'),
+              color: theme('colors.indigo.700'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          tertiary: {
+            backgroundColor: theme('colors.orange.400'),
+            color: theme('colors.black'),
+            hover: {
+              backgroundColor: theme('colors.orange.600'),
+              color: theme('colors.black'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          'tertiary-soft': {
+            backgroundColor: theme('colors.orange.200'),
+            color: theme('colors.orange.600'),
+            hover: {
+              backgroundColor: theme('colors.orange.300'),
+              color: theme('colors.orange.700'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          light: {
+            backgroundColor: theme('colors.white'),
+            color: theme('colors.stone.800'),
+            borderColor: theme('colors.stone.300'),
+            hover: {
+              backgroundColor: theme('colors.stone.100'),
+              color: theme('colors.stone.900'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          dark: {
+            backgroundColor: theme('colors.black'),
+            color: theme('colors.white'),
+            hover: {
+              backgroundColor: theme('colors.stone.800'),
+              color: theme('colors.white'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          danger: {
+            backgroundColor: theme('colors.red.600'),
+            color: theme('colors.white'),
+            hover: {
+              backgroundColor: theme('colors.red.700'),
+              color: theme('colors.white'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          'danger-soft': {
+            backgroundColor: theme('colors.red.200'),
+            color: theme('colors.red.600'),
+            hover: {
+              backgroundColor: theme('colors.red.300'),
+              color: theme('colors.red.700'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          warning: {
+            backgroundColor: theme('colors.yellow.400'),
+            color: theme('colors.black'),
+            hover: {
+              backgroundColor: theme('colors.yellow.300'),
+              color: theme('colors.black'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          'warning-soft': {
+            backgroundColor: theme('colors.yellow.200'),
+            color: theme('colors.yellow.600'),
+            hover: {
+              backgroundColor: theme('colors.yellow.300'),
+              color: theme('colors.yellow.700'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          success: {
+            backgroundColor: theme('colors.green.500'),
+            color: theme('colors.white'),
+            hover: {
+              backgroundColor: theme('colors.green.700'),
+              color: theme('colors.white'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          'success-soft': {
+            backgroundColor: theme('colors.green.200'),
+            color: theme('colors.green.600'),
+            hover: {
+              backgroundColor: theme('colors.green.300'),
+              color: theme('colors.green.700'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          clear: {
+            '@apply bg-transparent px-0': {},
+            color: theme('colors.stone.600'),
+            hover: {
+              color: theme('colors.stone.800'),
+            },
+            disabled: {},
+            icon: {},
+          },
+          custom: {
+            foo: {
+              backgroundColor: theme('colors.pink.500'),
+              color: theme('colors.white'),
+              hoverBackgroundColor: theme('colors.pink.600'),
+              hoverColor: theme('colors.white'),
+              styles: {},
+              hoverStyles: {},
+            },
+          },
+        },
+      }),
+    },
+  },
+  plugins: [components],
+};
+```

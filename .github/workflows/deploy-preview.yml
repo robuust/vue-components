@@ -2,6 +2,7 @@ name: Deploy Preview
 
 permissions:
   contents: write
+  pull-requests: write
 
 on:
   pull_request:
@@ -44,10 +45,3 @@ jobs:
           token: ${{ secrets.TOKEN }}
           preview-branch: gh-pages
           umbrella-dir: pr-preview
-
-      - name: Post GitHub comment 📝
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          message: |
-            Preview available at: https://robuust.github.io/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}/

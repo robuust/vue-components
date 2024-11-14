@@ -12,7 +12,7 @@ hero:
       link: /components
     - theme: alt
       text: Getting started
-      link: /guide
+      link: /guide/getting-started
 
 features:
   - title: ✨ Vue 3 Components

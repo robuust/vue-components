@@ -32,3 +32,9 @@ Go to our website [Robuust Digital](https://robuust.digital) for more informatio
 ## Authors 
 
 <VPTeamMembers size="small" :members="members" />
+
+## License
+
+MIT © [Robuust Digital](https://robuust.digital)
+
+With `@robuust-digital/vue-components`, bring consistency, flexibility, and a polished look to all your Vue 3 applications.
