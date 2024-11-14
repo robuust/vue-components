@@ -45,6 +45,10 @@ jobs:
           preview-branch: gh-pages
           umbrella-dir: pr-preview
 
+  comment:
+    needs: deploy-preview
+    runs-on: ubuntu-latest
+    steps:
       - name: Post GitHub comment 📝
         uses: marocchino/sticky-pull-request-comment@v2
         with:
