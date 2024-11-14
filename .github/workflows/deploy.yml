@@ -6,32 +6,33 @@ permissions:
 on:
   push:
     branches:
-      - feature/gh-actions
+      - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    concurrency: ${{ github.workflow }}-${{ github.ref }}
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository 🛎
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js 📦
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install dependencies 📦
         run: yarn install --frozen-lockfile
 
-      - name: Build components
+      - name: Build components 🛠
         run: yarn run build
 
-      - name: Build documentation
+      - name: Build documentation 📚
         run: yarn run docs:build --base=/vue-components/
 
-      - name: Deploy to GitHub Pages
-      - uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: docs/.vitepress/dist
           branch: gh-pages

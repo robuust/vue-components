@@ -17,27 +17,27 @@ jobs:
   deploy-preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository 🛎
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js 📦
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install dependencies 📦
         if: github.event.action != 'closed'
         run: yarn install --frozen-lockfile
 
-      - name: Build components
+      - name: Build components 🛠
         if: github.event.action != 'closed'
         run: yarn run build
 
-      - name: Build documentation
+      - name: Build documentation 📚
         if: github.event.action != 'closed'
         run: yarn run docs:build --base=/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}/
 
-      - name: Deploy preview
+      - name: Deploy preview 🚀
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: docs/.vitepress/dist
@@ -45,7 +45,7 @@ jobs:
           preview-branch: gh-pages
           umbrella-dir: pr-preview
 
-      - name: Post GitHub comment
+      - name: Post GitHub comment 📝
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
