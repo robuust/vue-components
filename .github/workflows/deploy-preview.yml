@@ -20,11 +20,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install and Build
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
         if: github.event.action != 'closed'
-        run: |
-          yarn install --frozen-lockfile
-          yarn run docs:build --base=/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}/
+        run: yarn install --frozen-lockfile
+
+      - name: Build components
+        if: github.event.action != 'closed'
+        run: yarn run build
+
+      - name: Build documentation
+        if: github.event.action != 'closed'
+        run: yarn run docs:build --base=/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}/
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
@@ -38,6 +49,5 @@ jobs:
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          token: ${{ secrets.TOKEN }}
           message: |
             Preview available at: https://robuust.github.io/vue-components/pr-preview/pr-${{ github.event.pull_request.number }}/

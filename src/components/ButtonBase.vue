@@ -14,7 +14,7 @@
     <slot name="spinner">
       <SpinnerIcon
         v-if="spinning"
-        class="button-icon animate-spin"
+        class="button-icon button-icon-loading"
       />
     </slot>
   </Component>

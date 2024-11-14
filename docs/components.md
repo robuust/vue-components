@@ -1,85 +1,15 @@
-# Markdown Extension Examples
+# Components
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+This page provides an overview of all the components available in the library. Click on the component name to view detailed documentation and usage examples.
 
-## Syntax Highlighting
+## Available Components
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+- [ButtonBase](/components/button-base): A versatile button component designed with **Vue 3** and **Tailwind CSS**. It includes customizable color options, size variants, and additional configuration options to adapt to different use cases.
 
-**Input**
+## Coming Soon
 
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
+Stay tuned for more components that will be added to this library in the future.
 
-**Output**
+## How to Use
 
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-
-## Custom Containers
-
-**Input**
-
-```md
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
-```
-
-**Output**
-
-::: info
-This is an info box.
-:::
-
-::: tip
-This is a tip.
-:::
-
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
-
-## More
-
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+To use any of these components, import them into your Vue components and use them as described in their respective documentation pages.

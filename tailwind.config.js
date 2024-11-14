@@ -9,6 +9,12 @@ export default {
     extend: {
       components: (theme) => ({
         button: {
+          primary: {
+            backgroundColor: '#d9ff00',
+            hover: {
+              backgroundColor: '#b6cc00',
+            },
+          },
           custom: {
             foo: {
               backgroundColor: theme('colors.pink.500'),

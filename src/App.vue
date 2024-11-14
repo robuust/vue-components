@@ -44,6 +44,7 @@
         label="Tertiary soft"
         color="tertiary-soft"
         size="sm"
+        disabled
         :icon="BeakerIcon"
       />
       <ButtonBase

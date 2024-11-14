@@ -1,6 +1,6 @@
 {
   "name": "@robuust-digital/vue-components",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.1-rc.1",
   "type": "module",
   "description": "A modern and customizable component library built with **Vue 3** and **Tailwind CSS**, designed to deliver a flexible, cohesive UI experience across all projects. Quickly integrate reusable components with ease, and customize them to suit your unique branding needs.",
   "directories": {
@@ -38,9 +38,7 @@
     "preview": "vite preview",
     "test:unit": "vitest run",
     "lint": "eslint . --fix",
-    "npm:login": "npm login",
-    "npm:publish": "npm publish --access public",
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs --host",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
