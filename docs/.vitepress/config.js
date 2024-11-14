@@ -9,15 +9,22 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Getting started', link: '/guide' },
-      { text: 'Components', link: '/components' },
+      { text: 'Guide', link: '/guide/getting-started' },
+      { text: 'Components', link: '/components/' },
       { text: 'About', link: '/about' }
     ],
 
     sidebar: [
       {
+        text: 'Introduction',
+        items: [
+          { text: 'Getting Started', link: '/guide/getting-started' },
+          { text: 'Contributing', link: '/guide/contributing' }
+        ]
+      },
+      {
         text: 'Components',
-        link: '/components',
+        link: '/components/',
         items: [
           { text: 'ButtonBase', link: '/components/button-base' },
         ],
@@ -30,4 +37,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/robuust/vue-components' },
     ],
   },
+  rewrites: {
+    'guide/index.md': 'guide/getting-started.md',
+  }
 });
