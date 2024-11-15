@@ -50,6 +50,8 @@ The `color` prop supports both predefined and custom values. Default colors incl
 - `danger`
 - `warning`
 - `success`
+- `clear`
+- `custom-*`
 
 Additional variants such as `primary-soft` can be created by extending your Tailwind configuration.
 
@@ -334,10 +336,12 @@ export default {
             foo: {
               backgroundColor: theme('colors.pink.500'),
               color: theme('colors.white'),
-              hoverBackgroundColor: theme('colors.pink.600'),
-              hoverColor: theme('colors.white'),
-              styles: {},
-              hoverStyles: {},
+              hover: {
+                backgroundColor: theme('colors.pink.600'),
+                color: theme('colors.white'),
+              },
+              disabled: {},
+              icon: {},
             },
           },
         },
