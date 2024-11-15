@@ -10,6 +10,7 @@ This page provides an overview of all the components available in the library. C
 
 We are continuously working to expand our component library. Here are some of the exciting components we plan to build in the near future:
 
+- `Alert`: Display alert messages in a consistent manner.
 - `Drawer`: A slide-in panel for navigation or additional content.
 - `Combobox`: An enhanced dropdown with search capabilities.
 - `ActionMessage`: Display success or error messages in a stylish way.
@@ -25,7 +26,7 @@ We are continuously working to expand our component library. Here are some of th
 - `Card`: A flexible card for displaying content.
 - `Accordion`: Expandable and collapsible content sections.
 - `ConfirmationModal`: Modal dialog for confirming actions.
-- `Error`: Display error messages in a consistent manner.
+- `DataTable`: Display tabular data with sorting and filtering options.
 
 Stay tuned for these updates and more as we continue to enhance our library!
 
