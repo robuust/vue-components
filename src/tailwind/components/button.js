@@ -7,13 +7,17 @@ export default (theme) => {
   const customColors = theme('components.button.custom') || {};
   const customColorStyles = Object.keys(customColors).reduce((acc, colorName) => {
     acc[`&.button-custom-${colorName}`] = {
-      backgroundColor: customColors[colorName].backgroundColor,
-      color: customColors[colorName].color,
-      ...customColors[colorName].styles,
+      ...customColors[colorName],
       '&:hover': {
-        backgroundColor: customColors[colorName].hoverBackgroundColor,
-        color: customColors[colorName].hoverColor,
-        ...customColors[colorName].hoverStyles,
+        ...customColors[colorName].hover,
+      },
+
+      '&:disabled': {
+        ...customColors[colorName].disabled,
+      },
+
+      '.button-icon': {
+        ...customColors[colorName].icon,
       },
     };
     return acc;

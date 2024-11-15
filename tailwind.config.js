@@ -19,18 +19,21 @@ export default {
             foo: {
               backgroundColor: theme('colors.pink.500'),
               color: theme('colors.white'),
-              hoverBackgroundColor: theme('colors.pink.600'),
-              hoverColor: theme('colors.white'),
-              styles: {},
-              hoverStyles: {},
+              hover: {
+                backgroundColor: theme('colors.pink.600'),
+                color: theme('colors.white'),
+              },
             },
             bar: {
               backgroundColor: theme('colors.teal.500'),
               color: theme('colors.white'),
-              hoverBackgroundColor: theme('colors.teal.600'),
-              hoverColor: theme('colors.white'),
-              styles: {},
-              hoverStyles: {},
+              hover: {
+                backgroundColor: theme('colors.teal.600'),
+                color: theme('colors.white'),
+              },
+              icon: {
+                color: theme('colors.black'),
+              },
             },
           },
         },

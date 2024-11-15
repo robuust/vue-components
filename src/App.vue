@@ -92,6 +92,7 @@
       <ButtonBase
         label="Custom color bar"
         color="custom-bar"
+        :icon="BeakerIcon"
       />
     </div>
   </div>
